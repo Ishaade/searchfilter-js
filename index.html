@@ -2,49 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Form (Client-side Validation)</title>
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetch and Display Users</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div id="formAlert" class="alert success" role="status" aria-live="polite"></div>
+  <h1>User Data</h1>
+  <button id="reload">Reload Data</button>
+  <div id="users"></div>
+  <div class="error" id="error"></div>
 
-    <div class="card" role="region" aria-labelledby="contactHeading">
-      <h1 id="contactHeading">Contact Us</h1>
-      <p class="lead">Fill the form below. We'll validate inputs on the client (no actual sending).</p>
-
-      <form id="contactForm" novalidate>
-        <!-- Name Field -->
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" required aria-describedby="nameError">
-          <small id="nameError" class="error-msg" aria-live="polite"></small>
-        </div>
-
-        <!-- Email Field -->
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="emailError">
-          <small id="emailError" class="error-msg" aria-live="polite"></small>
-        </div>
-
-        <!-- Message Field -->
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Write your message here..." required aria-describedby="messageError"></textarea>
-          <small id="messageError" class="error-msg" aria-live="polite"></small>
-        </div>
-
-        <div class="actions">
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
-        </div>
-      </form>
-    </div>
-  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
- 
